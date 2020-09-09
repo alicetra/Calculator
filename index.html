@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Calculator</title>
+    <style>
+        #calculator {
+            background: pink;
+            height: 75vh;
+            width: 40vw;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1vh solid lightgrey;
+            border-radius: 2vw;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: auto auto auto auto;
+            grid-template-areas:
+                "display display display display"
+                "numbers numbers numbers operands"
+                "numbers numbers numbers operands"
+                "numbers numbers numbers operands";
+        }
+
+        #display {
+            grid-area: display;
+            background: lightpink;
+            border-radius: 2vw;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: 3em;
+            color: white;
+        }
+
+        #numb {
+            background: lightpink;
+            border-radius: .5em;
+            grid-area: numbers;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+                "1""2""3"
+                "4""5""6"
+                "7""8""9"
+                "zero""point""equal";
+        }
+
+        #1 {
+            grid-area: 1;
+        }
+
+        #2 {
+            grid-area: 2;
+        }
+
+        #3 {
+            grid-area: 3;
+        }
+
+        #4 {
+            grid-area: 4;
+        }
+
+        #5 {
+            grid-area: 5;
+        }
+
+        #6 {
+            grid-area: 6;
+        }
+
+        #7 {
+            grid-area: 7;
+        }
+
+        #8 {
+            grid-area: 8;
+        }
+
+        #9 {
+            grid-area: 9;
+        }
+
+        #c {
+            grid-area: "c";
+        }
+
+        #zero {
+            grid-area: "zero";
+        }
+
+        #point {
+            grid-area: "point";
+        }
+
+        #operands {
+            grid-area: operands;
+            display: grid;
+        }
+
+        button {
+            border: lightgray solid;
+            background: white;
+            border-radius: .5em;
+            color: hotpink;
+        }
+        .operands {
+            background-color:palevioletred;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="calculator">
+        <div id="display"></div>
+        <div id="numb">
+            <button type="button" id="1">1</button>
+            <button type="button" id="2">2</button>
+            <button type="button" id="3">3</button>
+            <button type="button" id="4">4</button>
+            <button type="button" id="5">5</button>
+            <button type="button" id="6">6</button>
+            <button type="button" id="7">7</button>
+            <button type="button" id="8">8</button>
+            <button type="button" id="9">9</button>
+            <button type="button" id="zero">0</button>
+            <button type="button" id="point">.</button>
+            <button type="button" id="equal">=</button>
+        </div>
+        <div id="operands">
+            <button type="button" id="C" class="operands">c</button>
+            <button type="button" id="add" class="operands">+</button>
+            <button type="button" id="sub" class="operands">-</button>
+            <button type="button" id="multiply" class="operands">x</button>
+            <button type="button" id="divide" class="operands">÷</button>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="index.js"></script>
