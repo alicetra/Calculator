@@ -139,16 +139,16 @@ function calculator() {
     let finalTotal = 0;     
     if (totalString.includes("+")) {
         let splitString = totalString.split("+")
-        finalTotal += parseInt(splitString[0]) + parseInt(splitString[1])
+        finalTotal += parseFloat(splitString[0]) + parseFloat(splitString[1])
     }
     else if (totalString.includes("-")) {
         let splitString = totalString.split("-")
-        finalTotal += parseInt(splitString[0]) - parseInt(splitString[1])
+        finalTotal += parseFloat(splitString[0]) - parseFloat(splitString[1])
 
     }
     else if (totalString.includes("x")) {
         let splitString = totalString.split("x")
-        finalTotal += parseInt(splitString[0]) * parseInt(splitString[1])
+        finalTotal += parseFloat(splitString[0]) * parseFloat(splitString[1])
 
     }
     else if (totalString.includes("÷")) {
@@ -158,7 +158,7 @@ function calculator() {
             window.location.reload();
         }
         else  {
-        finalTotal += parseInt(splitString[0]) / parseInt(splitString[1])
+        finalTotal += parseFloat(splitString[0]) / parseFloat(splitString[1])
         }
     }
     if (finalTotal%1 !=0) {
